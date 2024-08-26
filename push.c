@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:32:44 by lukan             #+#    #+#             */
-/*   Updated: 2024/07/15 12:13:59 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/26 16:01:08 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	pusha(t_mat *first)
 	write(1,"pa\n", 3);
 
 }
+
 int	*changstacminus(int *str1, int size)
 {
 	int	*ris;

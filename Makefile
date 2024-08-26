@@ -13,7 +13,7 @@ LIBFTDIR = ./ft_libft
 FT_PRINTFDIR = ./ft_printf
 
 # Source files
-SRCS = main.c val.c freemem.c stack.c rotate.c swap.c rev_rotate.c push.c meccanicalkebab.c utilskebab.c
+SRCS = main.c val.c freemem.c stack.c rotate.c swap.c rev_rotate.c push.c meccanicalkebab.c utilskebab.c partofmekeb.c
 OBJS = $(SRCS:%.c=%.o)
 
 # Executable name

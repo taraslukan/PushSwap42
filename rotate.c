@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tlukan <tlukan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:30:51 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/05 17:08:53 by tlukan           ###   ########.fr       */
+/*   Updated: 2024/08/26 15:56:50 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ void	rr(t_mat *first)
 		{
 			tempa = first->staca[i];
 			tempb = first->stacb[i];
-
 		}
 		else
 		{
@@ -81,6 +80,11 @@ void	rr(t_mat *first)
 		i++;
 		ia++;
 	}
+	helprr(first, i, ia, tempa, tempb);
+}
+
+void	helprr(t_mat *first, int i, int ia, int tempa, int tempb)
+{
 	i = first->size_nb - 1;
 	ia = first->size_na - 1;
 	first->staca[ia] = tempa;

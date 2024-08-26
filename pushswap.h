@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:59:35 by tlukan            #+#    #+#             */
-/*   Updated: 2024/07/19 15:58:29 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/26 16:08:47 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@
 # include "liberror.h"
 # include "ft_printf/ft_printf.h"
 
-int		numbercontrol(char *str);
-int		ft_error(int error);
 int		validate(int argc, char **argv, t_mat *first);
 void	free_mat(char **mat);
 int		findnull(t_mat *first);
@@ -55,6 +53,12 @@ int		*changstacminus(int *str1, int size);
 int		*ft_strduppush(int *s1, int size, int *s2);
 int		funzionecosto(int ib, t_mat *first);
 void	funzione_che_muove(t_mat *first, int ia, int ib);
-int findlownode(t_mat *first);
+int		findlownode(t_mat *first);
+void	firstpart(t_mat *first,int ia,int ib);
+void	secondpart(t_mat *first,int ia,int ib);
+void	thirdpart(t_mat *first,int ia,int ib);
+void	fourthpart(t_mat *first,int ia,int ib);
+void	fifthpart(t_mat *first,int ia,int ib);
+void	helprr(t_mat *first, int i, int ia, int tempa, int tempb);
 
 #endif
