@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 15:34:28 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/26 15:36:10 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/27 14:53:15 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ int	funzionera(t_mat *first, int indexb)
 	while (i < first->size_na - 1)
 	{
 	    if (i == 0 
-	    && first->staca[i] < first->stacb[indexb] 
-	    && first->staca[first->size_na - 1] > first->stacb[indexb])
+	    && first->staca[i] > first->stacb[indexb] 
+	    && first->staca[first->size_na - 1] < first->stacb[indexb])
 	        return (i);
-	    else if (first->staca[i] > first->stacb[indexb] 
-		&& first->staca[i + 1] < first->stacb[indexb])
+	    else if (first->staca[i] < first->stacb[indexb] 
+		&& first->staca[i + 1] > first->stacb[indexb])
 	        return(i + 1);
 	    i++;
 	}

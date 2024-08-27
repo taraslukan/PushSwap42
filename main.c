@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:02:07 by tlukan            #+#    #+#             */
-/*   Updated: 2024/08/26 14:00:56 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/27 14:22:28 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,23 @@ int	main(int argc, char **argv)
 	if (!initialstack(&first, first.size_na, sizeof(int *)))
 		return (write(2, "Error\n", 7));
 	meccanicalkebab(&first);
-	while (i < first.size_na && first.staca[i] != first.max)
+	while (i < first.size_na && first.staca[i] != first.min)
 		i++;
 	if (i > (first.size_na / 2))
 	{
-		while (first.staca[0] != first.max)
+		while (first.staca[0] != first.min)
 			rra(&first);
 	}
 	else
 	{
-		while (first.staca[0] != first.max)
+		while (first.staca[0] != first.min)
 			ra(&first);
+	}
+	i = 0;
+	while(first.staca[i])
+	{
+		printf("%i\n",first.staca[i]);
+		i++;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:25:00 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/26 16:02:12 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/27 14:51:39 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	meccanicalkebab(t_mat *first)
 	int	ia;
 
 	startpush(first);
+	if (first->staca[0] == first->max)
+		ra(first);
 	while (first->size_nb > 0)
 	{
 		ib = findlownode(first);
@@ -104,3 +106,4 @@ void	startpush(t_mat *first)
 		pushb(first);
 	}
 }
+ 
