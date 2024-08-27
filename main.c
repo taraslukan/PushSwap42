@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:02:07 by tlukan            #+#    #+#             */
-/*   Updated: 2024/08/27 14:22:28 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/27 15:22:26 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@ int	main(int argc, char **argv)
 	{
 		while (first.staca[0] != first.min)
 			ra(&first);
-	}
-	i = 0;
-	while(first.staca[i])
-	{
-		printf("%i\n",first.staca[i]);
-		i++;
 	}
 	return (0);
 }
