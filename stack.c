@@ -6,24 +6,24 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 14:06:14 by lukan             #+#    #+#             */
-/*   Updated: 2024/06/14 14:09:44 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/28 16:40:48 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int findnull(t_mat *first)
+int	findnull(t_mat *first)
 {
 	int	i;
 	int	ris;
-	
+
 	i = 0;
 	ris = 0;
-	while(i < first->size_na)
+	while (i < first->size_na)
 	{
 		if (first->staca[i] == ris)
 		{
-			i = 0;			
+			i = 0;
 			ris++;
 		}
 		else

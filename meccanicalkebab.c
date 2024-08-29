@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:25:00 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/27 15:13:44 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/28 16:51:38 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,10 @@ void	meccanicalkebab(t_mat *first)
 		funzione_che_muove(first, ia, ib);
 		pusha(first);
 	}
-	
 }
 
-void	funzione_che_muove(t_mat *first,int ia,int ib)
-{	
+void	funzione_che_muove(t_mat *first, int ia, int ib)
+{
 	if (ib < (first->size_nb / 2) && ia < (first->size_na / 2))
 	{
 		if (ib > ia)
@@ -53,7 +52,7 @@ int	findlownode(t_mat	*first)
 	int	ib;
 	int	cost;
 	int	ret;
-	
+
 	cost = INT_MAX;
 	ib = 0;
 	while (ib < first->size_nb)
@@ -71,7 +70,7 @@ int	findlownode(t_mat	*first)
 int	funzionecosto(int ib, t_mat *first)
 {
 	int	indexa;
-	
+
 	indexa = funzionera(first, ib);
 	if (ib < (first->size_nb / 2) && indexa < (first->size_na / 2))
 	{
@@ -88,13 +87,13 @@ int	funzionecosto(int ib, t_mat *first)
 			return (first->size_na - indexa);
 	}
 	else if (ib > (first->size_nb / 2) && indexa < (first->size_na / 2))
-		return((first->size_nb - ib) + indexa);
+		return ((first->size_nb - ib) + indexa);
 	else
 		return ((first->size_na - indexa) + ib);
 }
 
 void	startpush(t_mat *first)
-{	
+{
 	first->min = ft_findmin(first);
 	first->max = ft_findmax(first);
 	while (first->size_na > 2)
@@ -106,4 +105,3 @@ void	startpush(t_mat *first)
 		pushb(first);
 	}
 }
- 

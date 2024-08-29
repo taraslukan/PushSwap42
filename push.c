@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:32:44 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/26 16:01:08 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/28 16:46:10 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@ void	pushb(t_mat *first)
 		first->stacb[0] = first->staca[0];
 		first->staca = changstacminus(first->staca, first->size_na);
 		first->size_na--;
-		write(1,"pb\n", 3);
-		return;
+		write(1, "pb\n", 3);
+		return ;
 	}
 	first->stacb = ft_strduppush(first->stacb, first->size_nb, first->staca);
 	first->staca = changstacminus(first->staca, first->size_na);
 	first->size_na--;
 	first->size_nb++;
-	write(1,"pb\n", 3);
-
+	write(1, "pb\n", 3);
 }
 
 void	pusha(t_mat *first)
@@ -38,8 +37,7 @@ void	pusha(t_mat *first)
 	first->stacb = changstacminus(first->stacb, first->size_nb);
 	first->size_na++;
 	first->size_nb--;
-	write(1,"pa\n", 3);
-
+	write(1, "pa\n", 3);
 }
 
 int	*changstacminus(int *str1, int size)
@@ -57,7 +55,7 @@ int	*changstacminus(int *str1, int size)
 		i++;
 	}
 	free(str1);
-	return (ris);	
+	return (ris);
 }
 
 int	*ft_strduppush(int *s1, int size, int *s2)

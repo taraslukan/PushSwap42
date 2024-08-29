@@ -6,15 +6,15 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 14:11:39 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/26 15:23:10 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/28 16:48:51 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	firstpart(t_mat *first,int ia,int ib)
-{	
-	while(ia > 0)
+void	firstpart(t_mat *first, int ia, int ib)
+{
+	while (ia > 0)
 	{
 		rr(first);
 		ia--;
@@ -22,17 +22,17 @@ void	firstpart(t_mat *first,int ia,int ib)
 	}
 	while (ib > 0)
 	{
-		rb(first);	
-		ib--;	
+		rb(first);
+		ib--;
 	}
 }
 
-void	secondpart(t_mat *first,int ia,int ib)
+void	secondpart(t_mat *first, int ia, int ib)
 {
-	while(ib > 0)
+	while (ib > 0)
 	{
 		rr(first);
-		ib--;	
+		ib--;
 		ia--;
 	}
 	while (ia > 0)
@@ -42,9 +42,9 @@ void	secondpart(t_mat *first,int ia,int ib)
 	}
 }
 
-void	thirdpart(t_mat *first,int ia,int ib)
+void	thirdpart(t_mat *first, int ia, int ib)
 {
-	while(ia < first->size_na && ib < first->size_nb)
+	while (ia < first->size_na && ib < first->size_nb)
 	{
 		rrr(first);
 		ia++;
@@ -59,13 +59,13 @@ void	thirdpart(t_mat *first,int ia,int ib)
 		}
 		else
 		{
-			rra(first);	
+			rra(first);
 			ia++;
 		}
 	}
 }
 
-void	fourthpart(t_mat *first,int ia,int ib)
+void	fourthpart(t_mat *first, int ia, int ib)
 {
 	while (ib < first->size_nb || ia > 0)
 	{
@@ -82,7 +82,7 @@ void	fourthpart(t_mat *first,int ia,int ib)
 	}
 }
 
-void	fifthpart(t_mat *first,int ia,int ib)
+void	fifthpart(t_mat *first, int ia, int ib)
 {
 	while (ia < first->size_na || ib > 0)
 	{

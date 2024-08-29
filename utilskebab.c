@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 15:34:28 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/27 14:53:15 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/28 16:34:08 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	metadown(int i, t_mat *first)
 		ra(first);
 		i--;
 	}
-		pusha(first);
+	pusha(first);
 }
 
 void	metaup(int i, t_mat *first)
 {
-	int y;
-	
+	int	y;
+
 	y = first->size_na - i;
 	while (y > 0)
 	{
@@ -36,36 +36,36 @@ void	metaup(int i, t_mat *first)
 }
 
 int	ft_findmin(t_mat *first)
-{	
+{
 	int	min;
 	int	i;
-	
+
 	i = 0;
 	min = first->staca[0];
 	while (i < first->size_na)
 	{
-        if (first->staca[i] < min)
+		if (first->staca[i] < min)
 		{
-            min = first->staca[i];
-        }
-        i++;
-    }
+			min = first->staca[i];
+		}
+		i++;
+	}
 	return (min);
 }
 
 int	ft_findmax(t_mat *first)
-{	
+{
 	int	max;
 	int	i;
-	
+
 	i = 0;
 	max = first->staca[0];
 	while (i < first->size_na)
 	{
-        if (first->staca[i] > max)
-            max = first->staca[i];
-        i++;
-    }
+		if (first->staca[i] > max)
+			max = first->staca[i];
+		i++;
+	}
 	return (max);
 }
 
@@ -76,14 +76,14 @@ int	funzionera(t_mat *first, int indexb)
 	i = 0;
 	while (i < first->size_na - 1)
 	{
-	    if (i == 0 
-	    && first->staca[i] > first->stacb[indexb] 
-	    && first->staca[first->size_na - 1] < first->stacb[indexb])
-	        return (i);
-	    else if (first->staca[i] < first->stacb[indexb] 
-		&& first->staca[i + 1] > first->stacb[indexb])
-	        return(i + 1);
-	    i++;
+		if (i == 0
+			&& first->staca[i] > first->stacb[indexb]
+			&& first->staca[first->size_na - 1] < first->stacb[indexb])
+			return (i);
+		else if (first->staca[i] < first->stacb[indexb]
+			&& first->staca[i + 1] > first->stacb[indexb])
+			return (i + 1);
+		i++;
 	}
-	return (i);	
+	return (i);
 }
