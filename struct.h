@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:59:51 by tlukan            #+#    #+#             */
-/*   Updated: 2024/08/28 16:36:23 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/29 14:46:06 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_mat
 	long int	xmap;
 	long int	ymap;
 	int			tempa;
+	int			move;
 }	t_mat;
 
 #endif

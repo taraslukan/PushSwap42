@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:39:49 by tlukan            #+#    #+#             */
-/*   Updated: 2024/07/15 12:52:05 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/29 16:23:17 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,4 +112,28 @@ int	control_doubles(t_mat *first)
 		i++;
 	}
 	return (1);
+}
+
+void	ifthree(t_mat *first)
+{
+	if (first->staca[0] == first->min && first->staca[2] == first->max)
+		return ;
+	else if (first->staca[0] == first->min && first->staca[1] == first->max)
+	{
+		ra(first);
+		sa(first);
+		rra(first);
+	}
+	else if (first->staca[1] == first->min && first->staca[2] == first->max)
+		sa(first);
+	else if (first->staca[1] == first->max && first->staca[2] == first->min)
+		rra(first);
+	else if (first->staca[2] == first->min && first->staca[0] == first->max)
+	{
+		sa(first);
+		rra(first);
+	}
+	else
+		ra(first);
+	return ;
 }

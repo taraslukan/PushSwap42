@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:25:00 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/28 16:51:38 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/29 16:24:12 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,20 @@ void	meccanicalkebab(t_mat *first)
 	int	ib;
 	int	ia;
 
-	startpush(first);
-	if (first->staca[0] == first->max)
-		ra(first);
+	first->move = 0;
+	first->min = ft_findmin(first);
+	first->max = ft_findmax(first);
+	if (first->size_na == 3)
+	{
+		ifthree(first);
+		return ;
+	}
+	if (first->size_na != 1)
+	{
+		startpush(first);
+		if (first->staca[0] == first->max)
+			ra(first);
+	}
 	while (first->size_nb > 0)
 	{
 		ib = findlownode(first);
@@ -94,8 +105,6 @@ int	funzionecosto(int ib, t_mat *first)
 
 void	startpush(t_mat *first)
 {
-	first->min = ft_findmin(first);
-	first->max = ft_findmax(first);
 	while (first->size_na > 2)
 	{
 		if (first->staca[0] == first->min || first->staca[0] == first->max)

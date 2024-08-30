@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:59:35 by tlukan            #+#    #+#             */
-/*   Updated: 2024/08/28 16:42:17 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/29 14:50:07 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ void	thirdpart(t_mat *first, int ia, int ib);
 void	fourthpart(t_mat *first, int ia, int ib);
 void	fifthpart(t_mat *first, int ia, int ib);
 void	helprr(t_mat *first, int i, int ia, int tempb);
+void	ifthree(t_mat *first);
 
 #endif

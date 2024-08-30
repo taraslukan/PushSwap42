@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 13:32:44 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/28 16:46:10 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/29 14:48:49 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	pushb(t_mat *first)
 	first->size_na--;
 	first->size_nb++;
 	write(1, "pb\n", 3);
+	first->move++;
 }
 
 void	pusha(t_mat *first)
@@ -38,6 +39,7 @@ void	pusha(t_mat *first)
 	first->size_na++;
 	first->size_nb--;
 	write(1, "pa\n", 3);
+	first->move++;
 }
 
 int	*changstacminus(int *str1, int size)

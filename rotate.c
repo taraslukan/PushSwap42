@@ -6,7 +6,7 @@
 /*   By: lukan <lukan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:30:51 by lukan             #+#    #+#             */
-/*   Updated: 2024/08/28 16:38:50 by lukan            ###   ########.fr       */
+/*   Updated: 2024/08/29 14:48:07 by lukan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ra(t_mat *first)
 	i = first->size_na - 1;
 	first->staca[i] = temp;
 	write(1, "ra\n", 3);
+	first->move++;
 }
 
 void	rb(t_mat *first)
@@ -52,6 +53,7 @@ void	rb(t_mat *first)
 	i = first->size_nb - 1;
 	first->stacb[i] = temp;
 	write(1, "rb\n", 3);
+	first->move++;
 }
 
 void	rr(t_mat *first)
@@ -80,6 +82,7 @@ void	rr(t_mat *first)
 		ia++;
 	}
 	helprr(first, i, ia, tempb);
+	first->move++;
 }
 
 void	helprr(t_mat *first, int i, int ia, int tempb)
@@ -89,4 +92,5 @@ void	helprr(t_mat *first, int i, int ia, int tempb)
 	first->staca[ia] = first->tempa;
 	first->stacb[i] = tempb;
 	write(1, "rr\n", 3);
+	first->move++;
 }

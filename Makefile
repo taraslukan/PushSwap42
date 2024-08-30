@@ -1,4 +1,4 @@
-NAME = pushswap
+NAME = push_swap
 
 # Compiler
 CC = gcc
